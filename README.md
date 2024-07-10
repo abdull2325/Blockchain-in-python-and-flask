@@ -1,5 +1,7 @@
 # Blockchain-in-python-and-flask
-Features
+Features:
+
+
 Create a new blockchain: Initializes a new blockchain with a genesis block and sets up the initial state.
 
 Add new transactions to the blockchain: Records new transactions into the current block for subsequent validation and inclusion in the blockchain.
@@ -26,8 +28,16 @@ Tokenization: Allow the creation of tokens on your blockchain. These could repre
 
 Scalability Solutions: Implement solutions to improve the scalability of your blockchain, such as sharding or off-chain transactions.
 
+
+
+
 HOW TO RUN:
+
+
 AFTER your flask socket io server starts running:
+
+
+
 Open Postman:
 
 If you don't have Postman installed, you can download it from the Postman website.
