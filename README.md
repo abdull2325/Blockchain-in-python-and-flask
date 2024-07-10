@@ -20,6 +20,8 @@ Interactivity with Real-World Applications: You could create an API that allows 
 
 Consensus Algorithms: Implement different types of consensus algorithms like Proof of Stake (PoS), Delegated Proof of Stake (DPoS), or Byzantine Fault Tolerance (BFT). Each has its own advantages and disadvantages in terms of security, speed, and energy efficiency
 .
+
+
 Peer-to-Peer Network: Instead of running the blockchain on a single server, create a peer-to-peer network where multiple nodes maintain the blockchain. This increases the robustness and decentralization of the system.
 
 Enhanced Security Measures: Implement additional security measures, such as two-factor authentication, to protect users' wallets and transactions.
