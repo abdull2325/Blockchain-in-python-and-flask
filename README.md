@@ -1,49 +1,66 @@
-# Blockchain-in-python-and-flask
+# Blockchain-in-Python-and-Flask
 
-A comprehensive blockchain implementation using Python and Flask, featuring smart contracts, wallet systems, and various consensus algorithms.
+A robust and feature-rich blockchain implementation using Python and Flask, showcasing advanced functionalities such as smart contracts, wallet systems, and various consensus algorithms.
 
 ## Features
 
-- Create a new blockchain
-- Add new transactions to the blockchain
-- Mine new blocks
-- Register new nodes
-- Resolve conflicts between nodes (Consensus)
-- Smart Contracts
-- Wallet System
-- Interactivity with Real-World Applications
-- Multiple Consensus Algorithms (PoW, PoS, DPoS, BFT)
-- Peer-to-Peer Network
-- Enhanced Security Measures
-- Tokenization
-- Scalability Solutions
+- Blockchain creation and management
+- Transaction processing and mining
+- Node registration and consensus mechanisms
+- Smart contract implementation
+- Secure wallet system
+- Real-world application integration
+- Multiple consensus algorithms (PoW, PoS, DPoS, BFT)
+- Peer-to-peer networking
+- Enhanced security measures
+- Asset tokenization
+- Scalability solutions
 
-## How to Run
+## Installation
 
-After your Flask SocketIO server starts running, use Postman to interact with the following endpoints:
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Install required dependencies:
+
+## Usage
+
+After starting the Flask server, use Postman or any API client to interact with the following endpoints:
 
 ### 1. Create a New Wallet
 - **Endpoint:** `/wallet/new`
 - **Method:** GET
+- **Description:** Generates a new wallet with a private and public key pair.
 
 ### 2. Create a New Transaction
 - **Endpoint:** `/transactions/new`
 - **Method:** POST
 - **Body:**
-  ```json
-  {
-    "sender": "<public_key_of_sender>",
-    "recipient": "<public_key_of_recipient>",
-    "amount": 10,
-    "signature": ""
-  }
+```json
+{
+ "sender": "<public_key_of_sender>",
+ "recipient": "<public_key_of_recipient>",
+ "amount": 10,
+ "signature": ""
+}
+1. Add a New Transaction
+Endpoint: /transaction/new
+Method: POST
+Body:
+json
 
- ### 3. Sign a Transaction
 
-- **Endpoint:** /transaction/sign
-- **Method:** POST
-- **Body:**
-  ```json
+{
+  "sender": "<public_key_of_sender>",
+  "recipient": "<public_key_of_recipient>",
+  "amount": 10
+}
+Description: Adds a new transaction to the blockchain.
+2. Sign a Transaction
+Endpoint: /transaction/sign
+Method: POST
+Body:
+json
+
 
 {
   "private_key": "<private_key>",
@@ -53,49 +70,51 @@ After your Flask SocketIO server starts running, use Postman to interact with th
     "amount": 10
   }
 }
-4. Mine a New Block
-
+Description: Signs a transaction using the provided private key.
+3. Mine a New Block
 Endpoint: /mine
 Method: GET
-
-5. Get the Full Blockchain
-
+Description: Mines a new block and adds it to the blockchain.
+4. Get the Full Blockchain
 Endpoint: /chain
 Method: GET
-
-6. Register a Node
-
+Description: Retrieves the entire blockchain.
+5. Register a Node
 Endpoint: /nodes/register
 Method: POST
 Body:
-jsonCopy{
+json
+
+
+{
   "nodes": ["http://localhost:5001"]
 }
-
-
-7. Resolve Conflicts
-
+Description: Registers new nodes in the network.
+6. Resolve Conflicts
 Endpoint: /nodes/resolve
 Method: GET
-
-8. Create a Smart Contract
-
+Description: Resolves conflicts between nodes to achieve consensus.
+7. Create a Smart Contract
 Endpoint: /smart_contract/new
 Method: POST
 Body:
-jsonCopy{
+json
+
+
+{
   "condition": "if temperature > 30",
   "action": "send 10 tokens to recipient"
 }
-
-
-9. Create a Token
-
+Description: Creates a new smart contract with specified conditions and actions.
+8. Create a Token
 Endpoint: /token/create
 Method: POST
 Body:
-jsonCopy{
+json
+
+
+{
   "name": "TokenName",
   "total_supply": 1000000
 }
-
+Description: Creates a new token with a specified name and total supply.
